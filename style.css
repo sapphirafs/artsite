@@ -1,0 +1,309 @@
+/* make page colour white */
+html {
+  background-color: #ffffff;
+}
+
+/* centre body horizontally with margin */
+body {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* SECTION 1 (nav and header) */
+/* set the nav bar 95% of its parent element with width. horizontal centering of content with justify */
+nav {
+  padding: 25px;
+  background-color: #ffffff;
+  width: 95%;
+  justify-content: center;
+}
+
+/* the unordered list elements within the nav bar. inline flex aligns horizontally and justify self aligns to the right */
+nav ul {
+  float: right;
+  margin-right: -17px;
+  display: inline-flex;
+  justify-self: end;
+  margin-top: 0%;
+  padding: inherit;
+  align-items: baseline;
+}
+
+/* add box shadow effect and circular edges to the list items in the nav */
+nav li {
+  display: inline-flex;
+  margin-top: 0.5em;
+  border-radius: 5px;
+  margin-right: 25px;
+  text-align: center;
+  background-color: rgb(74, 74, 74);
+  box-shadow: 2px 2px 0 #bbbbbb;
+}
+
+/* edit the links in the nav */
+nav a {
+  display: inline-block;
+  width: 120px;
+  padding: 5px 0;
+  text-align: center;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+}
+
+/* class that clears floats to avoid overlapping of elements */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* edit links as you hover over them with the hover selector */
+a:hover {
+  text-decoration: dotted rgb(162, 238, 152) underline;
+}
+
+/* HEADER main title of the site */
+.home-title {
+  text-align: center;
+  border-bottom: solid rgb(61, 61, 61) 1px;
+  padding-bottom: 2rem;
+  align-items: center;
+}
+
+/* image in the header 
+  keep ratio of image whilst covering the width of the body */
+.header img {
+  height: auto;
+  width: 100%;
+}
+
+/* style headers using Google's font that is applied in the HTML header */
+h1 {
+  font-size: 70px;
+  letter-spacing: 0.5rem;
+  color: rgb(61, 61, 61);
+  font-family: "Nanum Myeongjo", serif;
+}
+
+h2 {
+  font-size: 40px;
+  letter-spacing: 0.1rem;
+  color: rgb(61, 61, 61);
+  font-family: "Nanum Myeongjo", serif;
+  text-align: center;
+}
+
+/* GRID-container for banner 
+   this centers elements within the header's banner and viewport height is set to full. */
+.grid-container {
+  display: grid;
+  align-items: center;
+  height: 100vh;
+}
+
+/* AFTER HEADER */
+
+/* INTRO PARA */
+p {
+  text-align: center;
+  margin: 30px 0 15px;
+  color: rgb(61, 61, 61);
+  font-size: 20px;
+  /* back up fonts in case of incompatibility */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* containers for the intro paragraph */
+.intro-container {
+  height: 200px;
+  text-align: center;
+}
+
+/* center the items within the parent with align-self */
+.intro-text-container {
+  display: inline-flex;
+  align-self: center;
+  margin-right: 50%;
+}
+
+/* TITLES AND IMAGE CONTENT */
+h3 {
+  text-align: center;
+  font-weight: 400;
+  color: rgb(50, 49, 49);
+  font-size: 20px;
+  font-family: "Nanum Myeongjo", serif;
+  letter-spacing: 0.1px;
+}
+
+/* GRID THAT CONTAINS THE TITLES AND IMAGES BELOW */
+/* Now each title is above its respective image, and the layout is single-column */
+.art-title-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Adds spacing between each artwork */
+  width: 80%;
+  margin: 0 auto; /* Center the entire grid */
+}
+
+/* Make each column a single item, centering titles and images */
+.column-title,
+.column-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center titles and images */
+}
+
+/* Make the images larger and centered */
+.art-img {
+  max-width: 100%;  /* Allow images to scale down within the container */
+  height: auto;     /* Maintain the aspect ratio */
+  margin-bottom: 20px;
+}
+
+.art-title {
+  margin-bottom: 10px; /* Space between the title and image */
+  text-align: center; /* Center the title */
+}
+
+#backToTop {
+  margin-top: 0.5em;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 2px;
+  text-align: center;
+  place-self: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 0 #6a6666;
+  font-size: 14px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#backToTop a {
+  color: black;
+}
+
+/* CONTACT */
+.contact {
+  padding-top: 4rem;
+}
+
+/* FOOTER */
+footer p {
+  text-align: right;
+  margin: 2rem;
+}
+
+/* Second page (description.html) */
+.painting-video {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  margin: auto;
+  align-items: center;
+}
+
+/* RESPONSIVE DESIGN BELOW */
+
+/* TABLET SIZE ipad pro = 1024 wide */
+@media only screen and (min-width: 481px) and (max-width: 1100px) {
+  nav ul {
+    float: none;
+  }
+
+  nav li {
+    background-color: rgb(247, 246, 248);
+  }
+
+  nav a {
+    width: auto;
+    padding: 5px 0.75em;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+  }
+
+  /* make only one column for tablet with auto fitted rows */
+  grid-container {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 0;
+  }
+
+  /* get rid of wrapping for title to make more room */
+  .home-title h1 {
+    margin-top: 9%;
+    font-size: 50px;
+    letter-spacing: 0.3rem;
+    white-space: nowrap;
+  }
+
+  h2 {
+    font-size: 36px;
+    letter-spacing: 0.1rem;
+  }
+
+  h3 {
+    font-size: 14px;
+    letter-spacing: 0.1rem;
+  }
+}
+
+/* PHONE SCREEN SIZE iphone pro max = 430 width */
+@media only screen and (max-width: 450px) {
+  /* select all elements with * and create consistent measurements by including padding and content in measurements */
+  * ,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  nav {
+    margin-right: -6px;
+  }
+
+  nav ul {
+    margin: -2em;
+  }
+
+  nav li {
+    place-content: center;
+    margin-right: 1em;
+    margin: 0.2em 0.5em;
+    background-color: rgb(247, 246, 248);
+  }
+
+  nav a {
+    width: auto;
+    padding: 8px 5px;
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+  }
+
+  .intro-container {
+    margin-top: -4em;
+  }
+
+  .home-title h1 {
+    font-size: 36px;
+    letter-spacing: 0.1rem;
+    line-height: 1.6em;
+    margin-top: -5em;
+  }
+
+  h2 {
+    font-size: 30px;
+    letter-spacing: 0.1em;
+  }
+
+  h3 {
+    font-size: 14px;
+    letter-spacing: 0.1rem;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
