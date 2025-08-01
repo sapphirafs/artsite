@@ -144,7 +144,8 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 30px; /* Adds spacing between each artwork */
-  width: 80%;
+ /* width: 80%;*/
+  width: 100%; /*make wider images by increasing the above width*/
   margin: 0 auto; /* Center the entire grid */
 }
 
