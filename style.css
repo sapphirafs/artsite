@@ -111,7 +111,7 @@ p {
   text-align: center;
   margin: 20px auto;          /* smaller vertical spacing */
   color: rgb(61, 61, 61);
-  font-size: 16px;            /* down from 20px */
+  font-size: 15px;            /* down from 20px */
   line-height: 1.6;           /* better readability */
   max-width: 700px;           /* prevent too-wide lines */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
