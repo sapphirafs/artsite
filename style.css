@@ -174,10 +174,11 @@ h3 {
 
 .art-title-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* auto-fit columns */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* automatic columns */
   gap: 40px; /* spacing between artworks */
-  width: 90%; /* container slightly smaller than full width */
-  margin: 0 auto; /* center grid */
+  width: 90%; /* container width */
+  max-width: 1400px; /* prevents stretching too wide on large screens */
+  margin: 0 auto; /* center the grid */
 }
 
 .column-title,
@@ -188,8 +189,9 @@ h3 {
 }
 
 .art-img {
-  width: 100%;  /* scale image to fill its column */
-  height: auto; /* keep aspect ratio */
+  width: 100%;  /* scale to column width */
+  max-width: 400px; /* prevents individual images from getting too large */
+  height: auto; /* maintain aspect ratio */
   border-radius: 5px; /* optional rounding */
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
   transition: transform 0.3s ease; /* optional hover effect */
