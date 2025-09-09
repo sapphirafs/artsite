@@ -139,36 +139,44 @@ h3 {
 }
 
 /* GRID THAT CONTAINS THE TITLES AND IMAGES BELOW */
+
+/* Overlay background when zoomed */
+.image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Visible state */
+.image-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* The zoomed image */
+.image-overlay img {
+  max-width: 90%;   /* leave space at sides */
+  max-height: 85%;  /* leave space top/bottom */
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+
+
+
+
 /* Now each title is above its respective image, and the layout is single-column */
-/*.art-title-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 30px; /* Adds spacing between each artwork */
- /* width: 80%;*/
-  width: 100%; /*make wider images by increasing the above width*/
-  margin: 0 auto; /* Center the entire grid */
-}
-
-/* Make each column a single item, centering titles and images */
-.column-title,
-.column-image {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center titles and images */
-}
-
-/* Make the images larger and centered */
-.art-img {
-  max-width: 100%;  /* Allow images to scale down within the container */
-  height: auto;     /* Maintain the aspect ratio */
-  margin-bottom: 20px;
-}
-
-.art-title {
-  margin-bottom: 10px; /* Space between the title and image */
-  text-align: center; /* Center the title */
-}
-*/
 
 
 
