@@ -78,25 +78,26 @@ a:hover {
   height: auto;
   width: 100%;
 }
-
 /* style headers using Google's font that is applied in the HTML header */
 h1 {
-  font-size: 70px;
-  letter-spacing: 0.5rem;
+  font-size: 48px;            /* smaller, more balanced than 70px */
+  letter-spacing: 0.3rem;     /* subtler spacing */
   color: rgb(61, 61, 61);
   font-family: "Nanum Myeongjo", serif;
+  margin-bottom: 0.4em;       /* space below */
 }
 
 h2 {
-  font-size: 40px;
-  letter-spacing: 0.1rem;
+  font-size: 28px;            /* smaller than 40px */
+  letter-spacing: 0.05rem;
   color: rgb(61, 61, 61);
   font-family: "Nanum Myeongjo", serif;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 1em;
 }
 
-/* GRID-container for banner 
-   this centers elements within the header's banner and viewport height is set to full. */
+/* GRID-container for banner */
 .grid-container {
   display: grid;
   align-items: center;
@@ -108,17 +109,19 @@ h2 {
 /* INTRO PARA */
 p {
   text-align: center;
-  margin: 30px 0 15px;
+  margin: 20px auto;          /* smaller vertical spacing */
   color: rgb(61, 61, 61);
-  font-size: 20px;
-  /* back up fonts in case of incompatibility */
+  font-size: 16px;            /* down from 20px */
+  line-height: 1.6;           /* better readability */
+  max-width: 700px;           /* prevent too-wide lines */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* containers for the intro paragraph */
 .intro-container {
-  height: 200px;
+  height: auto;               /* allow natural text height */
   text-align: center;
+  padding: 20px 0;
 }
 
 /* center the items within the parent with align-self */
@@ -133,9 +136,10 @@ h3 {
   text-align: center;
   font-weight: 400;
   color: rgb(50, 49, 49);
-  font-size: 20px;
+  font-size: 16px;            /* smaller than 20px */
   font-family: "Nanum Myeongjo", serif;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.5px;      /* subtle spacing for elegance */
+  margin: 0.5em 0;
 }
 
 /* GRID THAT CONTAINS THE TITLES AND IMAGES BELOW */
